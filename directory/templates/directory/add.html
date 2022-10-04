@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Add records
+        </title>
+    </head>
+    <body>
+        <h1 align="center">INSERT NEW RECORDS</h1>
+        <form action="" enctype = "multipart/form-data" method="POST">
+            {% csrf_token %}
+            <table border="2" align="center">
+                {{ form.as_table }}
+
+            </table>
+            <input type="submit" value="INSERT RECORD">
+        </form>
+        <a href = "{% url 'index' %}">ALL RECORD</a>
+    </body>
+</html>
